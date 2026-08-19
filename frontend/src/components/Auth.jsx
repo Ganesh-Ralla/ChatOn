@@ -51,6 +51,7 @@ const Auth = ({ setOpenAuth }) => {
         try{
             const response = await api.post('users/',register)
             console.log(response.data);
+            setOpenAuth(false)
         }catch(error){
             console.error(error.response.data);
         }
