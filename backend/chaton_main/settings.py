@@ -166,5 +166,5 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS=[
     "http://localhost:5173",
-    "https://chat-on-ganesh-ralla.vercel.app",
+    "https://chaton-ganesh-ralla.vercel.app",
 ]
