@@ -11,7 +11,6 @@ from .serializers import UserSerializer
 
 # Create your views here.
 @api_view(['POST','GET'])
-@permission_classes([IsAuthenticated])
 def users(request):
     if request.method == "GET":
         user = User.objects.all().exclude(id=1).exclude(id=request.user.id)
