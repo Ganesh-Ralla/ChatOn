@@ -2,7 +2,7 @@ import axios from "axios";
 // http://localhost:8000/api/...
 // https://chat-on-vves.vercel.app/api/
 const api = axios.create({
-    baseURL:'http://localhost:8000/api',
+    baseURL:'https://chat-on-vves.vercel.app/api/',
     headers:{
         "Content-Type":"application/json"
     }
