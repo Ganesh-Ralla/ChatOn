@@ -167,7 +167,7 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS=True[
+CORS_ALLOWED_ORIGINS=[
     "http://localhost:5173",
     "https://chaton-ganesh-ralla.vercel.app",
 ]
