@@ -28,12 +28,15 @@ DEBUG = config("DEBUG",cast=bool)
 
 ALLOWED_HOSTS = [
     'chat-on-vves.vercel.app',
+    'localhost',
+    '127.0.0.1',
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     "corsheaders",
+    'channels',
 
     'accounts',
     'chats',
@@ -78,6 +82,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'chaton_main.wsgi.application'
+ASGI_APPLICATION = 'chaton_main.asgi.application'
 
 
 # Database
@@ -168,3 +173,9 @@ CORS_ALLOWED_ORIGINS=[
     "http://localhost:5173",
     "https://chaton-ganesh-ralla.vercel.app",
 ]
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}

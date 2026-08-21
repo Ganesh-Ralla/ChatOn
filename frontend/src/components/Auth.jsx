@@ -1,12 +1,12 @@
 import { X } from 'lucide-react'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import api from '../api/api'
 import { AuthContext } from '../context/AuthContext'
 
 const Auth = ({ setOpenAuth }) => {
     const [authMode, setAuthMode] = useState('login')
 
-    const{isLoggedIn,setIsLoggedIn} = useContext(AuthContext)
+    const{setIsLoggedIn} = useContext(AuthContext)
 
     const [login,setLogin] = useState({
         "username":'',
@@ -111,7 +111,7 @@ const Auth = ({ setOpenAuth }) => {
                                     <input name='email' value={register.email} onChange={handleRegister} type="email" placeholder='Enter your email' className=' mb-4 rounded-xl border border-[#303642] bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-gray-600 focus:border-indigo-500 ' />
 
                                     <label className=' mb-2 text-sm font-medium text-gray-300'>password</label>
-                                    <input name='password' value={register.password} onChange={handleRegister} type="password   " placeholder='Enter your password' className=' mb-4 rounded-xl border border-[#303642] bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-gray-600 focus:border-indigo-500 ' />
+                                    <input name='password' value={register.password} onChange={handleRegister} type="password" placeholder='Enter your password' className=' mb-4 rounded-xl border border-[#303642] bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-gray-600 focus:border-indigo-500 ' />
 
                                     <button type='submit' className=' rounded-xl bg-indigo-500 px-4 py-3 font-semibold text-white transition hover:bg-indigo-600 active:scale-[0.98]'>Register</button>
                                 </form>

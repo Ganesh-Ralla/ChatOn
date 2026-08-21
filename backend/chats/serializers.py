@@ -6,7 +6,7 @@ class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Messages
         fields = '__all__'
-        read_only_fields = ['room']
+        read_only_fields = ['room','sender']
 
 
 class ChatRoomSerializer(serializers.ModelSerializer):

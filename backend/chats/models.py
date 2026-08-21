@@ -20,7 +20,3 @@ class Messages(models.Model):
 
     def __str__(self):
         return f"{self.sender.username} {self.text[:30]}"
-
-    def clean(self):
-        if self.sender not in self.room.participants.all():
-            raise ValidationError("sender must be a participant of this room")

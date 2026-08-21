@@ -1,16 +1,12 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
-from chats.serializers import ChatRoomSerializer
-
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True,min_length=8,style={'input_type':'password'})
-
-    chat_room = ChatRoomSerializer(read_only=True,many=True)
     class Meta:
         model = User
-        fields = ['id','username','email','password','chat_room']
+        fields = ['id','username','email','password']
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
