@@ -69,7 +69,7 @@ const ChatScreen = ({ room_id, selectedPerson, setSelectedPerson }) => {
         console.log("WEBSOCKET EFFECT", room_id)
 
         const socket = new WebSocket(
-            `ws://localhost:8000/ws/chat/${room_id}/?token=${accessToken}`
+            `wss://chat-on-vves.vercel.app/ws/chat/${room_id}/?token=${accessToken}`
         )
 
         socketRef.current = socket

@@ -28,8 +28,6 @@ DEBUG = config("DEBUG",cast=bool)
 
 ALLOWED_HOSTS = [
     'chat-on-vves.vercel.app',
-    'localhost',
-    '127.0.0.1',
 ]
 
 
@@ -169,11 +167,10 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS=True
-# [
-#     "http://localhost:5173",
-#     "https://chaton-ganesh-ralla.vercel.app",
-# ]
+CORS_ALLOWED_ORIGINS=True[
+    "http://localhost:5173",
+    "https://chaton-ganesh-ralla.vercel.app",
+]
 
 CHANNEL_LAYERS = {
     "default": {
